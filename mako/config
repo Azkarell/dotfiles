@@ -1,0 +1,14 @@
+sort=-time
+layer=top
+background-color=#12161e
+width=300
+height=150
+border-size=2
+border-color=#7DA2C2
+border-radius=15
+padding=20
+icons=1
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+font=FiraCode Nerd Font 10

@@ -1,0 +1,146 @@
+@import url('file:///home/azkarell/.cache/wal/colors-waybar.css');
+
+* {
+  font-family: "FiraCode Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
+  font-size: 16px;
+  border-radius: 0;
+  min-height: 0;
+  border: none;
+  font-weight: bold;
+}
+
+#workspaces {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#tray {
+  margin: 6px 3px;
+  background-color: @background;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border-width: 0px;
+}
+
+#waybar {
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#window,
+#clock,
+#custom-power,
+#custom-reboot,
+#bluetooth,
+#battery,
+#pulseaudio,
+#backlight,
+#custom-temperature,
+#memory,
+#cpu,
+#network,
+#custom-lock {
+  border-radius: 4px;
+  margin: 6px 3px;
+  padding: 6px 12px;
+  background-color: @background;
+  color: #181825;
+}
+
+#clock {
+  background-color: @color4;
+}
+
+#custom-power {
+  background-color: @color5;
+}
+
+#custom-reboot {
+  background-color: @color7;
+}
+
+#bluetooth {
+  background-color: @color8;
+}
+
+#battery {
+  background-color: @color8;
+}
+
+#pulseaudio {
+  background-color: @color9;
+}
+
+#backlight {
+  background-color: @color10;
+}
+
+#custom-temperature {
+  background-color: @color11;
+}
+
+#memory {
+  background-color: @color12;
+}
+
+#cpu {
+  background-color: @color13;
+}
+
+#network {
+  background-color: @color14;
+}
+
+#custom-lock {
+  background-color: @color15;
+}
+
+#window {
+  background-color: @color2;
+}
+
+#waybar.hidden {
+  opacity: 0.5;
+}
+
+#workspaces button {
+  all: initial;
+  /* Remove GTK theme values (waybar #1351) */
+  min-width: 0;
+  /* Fix weird spacing in materia (waybar #450) */
+  box-shadow: inset 0 -3px transparent;
+  /* Use box-shadow instead of border so the text isn't offset */
+  padding: 6px 18px;
+  margin: 6px 3px;
+  border-radius: 4px;
+  background-color: @color1;
+  color: @color7;
+}
+
+#workspaces button.active {
+  color: @color14;
+  background-color: @color2;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: @color13;
+  background-color: @color3;
+}
+
+tooltip {
+  border-radius: 8px;
+  padding: 16px;
+  background-color: @background;
+  color: @foreground;
+}
+
+tooltip label {
+  padding: 5px;
+  background-color: @background;
+  color: @foreground;
+}
+                                                                                                                                                   
