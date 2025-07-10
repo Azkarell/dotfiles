@@ -29,6 +29,8 @@
   transition-duration: 0.5s;
 }
 
+
+
 #window,
 #clock,
 #custom-power,
@@ -131,6 +133,10 @@
   background-color: @color3;
 }
 
+#waybar.empty #window {
+  background: none;
+}
+
 tooltip {
   border-radius: 8px;
   padding: 16px;
@@ -143,4 +149,3 @@ tooltip label {
   background-color: @background;
   color: @foreground;
 }
-                                                                                                                                                   

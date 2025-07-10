@@ -1,0 +1,17 @@
+configuration {
+	modi:				"drun,window,combi,filebrowser";
+	font:				"FiraCode Nerd Font bold 10";
+	show-icons:                     false;
+	icon-theme: 			"Reversal-dark";
+	display-drun: 			"";
+	drun-display-format:            "{name}";
+	sidebar-mode: 			false;
+	dpi:			        128;
+}
+@import "~/.cache/wal/colors-rofi-dark"
+ entry {
+     	placeholder:			"Search";
+     	expand:                         false;
+     	padding:                        0.15% 0% 0% 0%;
+ }
+

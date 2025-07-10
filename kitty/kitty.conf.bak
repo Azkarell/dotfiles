@@ -1,13 +1,12 @@
-font_family      FiraCode Nerd Font
+#font_family      FiraCode Nerd Font
 font_size 14
-
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
+# bold_font        auto
+# italic_font      auto
+# bold_italic_font auto
 
 #background_opacity 0.85
-background_opacity 1.0
-blur_background yes
+background_opacity 0.0
+background_blur 0
 
 window_padding_width 15
 window_margin_width 0
@@ -103,8 +102,6 @@ inactive_text_alpha 0.7
 
 hide_window_decorations no
 
-macos_titlebar_color background
-macos_thicken_font 0.75
 
 active_border_color none
 
@@ -132,8 +129,18 @@ map alt+7 goto_tab 7
 map alt+8 goto_tab 8
 map alt+9 goto_tab 9
 
-
-
 map f1 new_os_window_with_cwd
 map alt+shift+t       launch --cwd=current --location=hsplit
 map ctrl+shift+t      launch --cwd=current --location=vsplit
+map alt+h 	neighboring_window left
+map alt+l  	neighboring_window right
+map alt+k	neighboring_window up
+map alt+j	neighboring_window down
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="IosevkaTerm Nerd Font"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
