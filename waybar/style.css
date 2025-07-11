@@ -1,4 +1,4 @@
-@import url('file:///home/azkarell/.cache/wal/colors-waybar.css');
+@import url('file:///home/azkarell/.config/waybar/colors.css');
 
 * {
   font-family: "FiraCode Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
@@ -149,3 +149,4 @@ tooltip label {
   background-color: @background;
   color: @foreground;
 }
+                     

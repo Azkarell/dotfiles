@@ -1,0 +1,6 @@
+night_light = { enabled = true, latitude=49.598121, longitude=11.003653, temperature= 3500}
+
+vibrance_configs =  [
+]
+
+hot_reload = true
