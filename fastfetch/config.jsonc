@@ -1,5 +1,14 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "display": {
+        "bar": {
+            "width": 10,
+             "charElapsed": "▮"
+        },
+        "key": {
+            "width": 15 
+        }
+    },
     "modules": [
         {
             "type": "title",
@@ -11,6 +20,7 @@
             "key": "Hostname",
             "format": "{host-name}"
         },
+        
         {
             "type": "host",
             "key": "Model"
@@ -28,21 +38,25 @@
         "processes",
         {
             "type": "wm",
-            "key": "Window Manager"
+            "key": "WM"
         },
-        {
-            "type": "de",
-            "key": "Desktop Environment"
-        },
+        //{
+        //    "type": "de",
+        //    "key": "Desktop Environment"
+        //},
         "shell",
         {
             "type": "terminal",
             "format": "{pretty-name} {version} {#37}█{#97}█ {#36}█{#96}█ {#35}█{#95}█ {#34}█{#94}█ {#33}█{#93}█ {#32}█{#92}█ {#31}█{#91}█ {#30}█{#90}█"
         },
         {
-            "type": "packages",
-            "format": "{all}"
+            "type": "TerminalFont",
+            "key": "Font"
         },
+        //{
+        //    "type": "packages",
+        //    "format": "{all}"
+        //},
         {
             "type": "cpu",
             "key": "Temperature",
@@ -51,8 +65,23 @@
         },
         {
             "type": "cpu",
-            "key": "CPU",
-            "format": "{cores-logical} x {name}"
+            "key": "CPU Cores",
+            "format": "({cores-physical}C / {cores-logical}T) @ {freq-max} ",
+            "percent": {
+                "type": 3,
+                "green": 30,
+                "yellow": 70
+            }
+        },
+        {
+            "type": "cpu",
+             "key": "CPU Name",
+             "format": "{name}"
+        },
+        {
+            "type": "CPUUsage",
+            "key": "Usage",
+            "format": "{avg-bar} {min-bar} {max-bar} {avg}"
         },
         {
             "type": "gpu",
@@ -60,7 +89,12 @@
         },
         {
             "type": "memory",
-            "key": "RAM"
+            "key": "RAM",
+            "percent": {
+                "type": 3,
+                "green": 30,
+                "yellow": 70
+            }
         },
         {
             "type": "disk",
@@ -77,12 +111,30 @@
             "type": "publicip",
             "key": "WAN IP",
             "timeout": 1000
+        },
+        {
+            "type": "Battery",
+            "format": "{capacity-bar} {capacity} @Cycle {cycle-count}",
+             "key" : "Battery",
+            "percent": {
+                "type": 3,
+                "green": 70,
+                "yellow":30,
+                "red": 15
+            }
+        },
+        {
+            "type": "weather",
+            "key": "Weather",
+             "location": "Erlangen",
+            "output-format": "%.1f°C %s",
+            "timeout": 1
         }
     ],
     "logo": {
         "type": "auto",
         "source": "$(ls /usr/share/wallpapers/*.{png,jpg,jpeg} | shuf -n 1)",
-        "width" : 36,
+        "width" : 38,
         "height": 12,
         "padding": {
             "top": 0,

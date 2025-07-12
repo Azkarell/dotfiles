@@ -45,6 +45,7 @@ waybar = {src="waybar.css", dst = "~/.config/waybar/colors.css"}
 mako = {src="mako.sh", dst="~/.config/mako/colors.sh"}
 hyprpaper= {src="hyprpaper-wallust.conf", dst="~/.config/hypr/wallpaper.conf"}
 nvim = {src="colors_neopywal.vim", dst="~/.cache/wallust/colors_neopywal.vim"}
+pywalfox = {src="pywalfox_colors.json", dst="~/.cache/wal/colors.json"} 
 # NOTE: prefer '' over "" for paths, avoids escaping.
 # template: A RELATIVE path that points to `~/.config/wallust/template` (depends on platform)
 # target: ABSOLUTE path in which to place a file with generated templated values.

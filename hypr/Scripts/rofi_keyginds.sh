@@ -8,7 +8,7 @@ mapfile -t BINDINGS < <(grep '^bind=' "$HYPR_CONF" | \
     sed -e 's/  */ /g' -e 's/bind=//g' -e 's/, /,/g' -e 's/ # /,/' | \
     awk -F, -v q="'" '{cmd=""; for(i=3;i<NF;i++) cmd=cmd $(i) " ";print "<b>"$1 " + " $2 "</b>  <i>" $NF ",</i><span color=" q "gray" q ">" cmd "</span>"}')
 
-CHOICE=$(printf '%s\n' "${BINDINGS[@]}" | rofi -dmenu -i -markup-rows -p "Hyprland Keybinds:" -config ~/.config/rofi/config-no-icons.rasi)
+CHOICE=$(printf '%s\n' "${BINDINGS[@]}" | rofi -dmenu -i -markup-rows -p "Hyprland Keybinds:" -config $HOME/.config/rofi/config-no-icons.rasi)
 
 # extract cmd from span <span color='gray'>cmd</span>
 CMD=$(echo "$CHOICE" | sed -n 's/.*<span color='\''gray'\''>\(.*\)<\/span>.*/\1/p')
