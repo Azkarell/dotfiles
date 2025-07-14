@@ -8,7 +8,7 @@ configuration {
 	sidebar-mode: 			false;
 	dpi:			        128;
 }
-@import "~/.cache/wal/colors-rofi-dark"
+@import "~/.config/rofi/theme.rasi"
  entry {
      	placeholder:			"Search";
      	expand:                         false;

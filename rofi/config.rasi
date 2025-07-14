@@ -9,7 +9,7 @@ configuration {
 	dpi:			        128;
 	    me-accept-entry: "!MousePrimary";
 }
-@import "~/.cache/wal/colors-rofi-dark"
+@import "~/.config/rofi/theme.rasi"
 element-text {
 	    backgorund-color: inherit;
 	    text-color: inherit;
