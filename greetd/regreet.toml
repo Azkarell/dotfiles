@@ -1,0 +1,23 @@
+[commands]
+reboot = [ "systemctl", "reboot" ]
+poweroff = [ "systemctl", "poweroff" ]
+
+[background]
+path = "/usr/share/backgrounds/nordic-wallpapers/ign-0001.png"
+
+[appearance]
+greeting_msg = "Welcom back, Daniel"
+
+[widget.clock]
+
+format = "%a %H:%M"
+
+timezone = "Europe/Berlin"
+
+
+[GTK]
+application_prefer_dark_theme = true
+cursor_theme_name = "Nordzy-hyprcursors"
+font_name = "FiraCode Nerd Font"
+theme_name = "Nordic-darker"
+
