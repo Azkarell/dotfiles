@@ -1,5 +1,5 @@
 configuration {
-	modi:				"drun,window,combi,filebrowser";
+	modi:				"drun,window,emoji,combi,filebrowser";
 	font:				"FiraCode Nerd Font bold 8";
 	show-icons:                     true;
 	icon-theme: 			"Reversal-dark";
@@ -7,7 +7,7 @@ configuration {
 	drun-display-format:            "{name}";
 	sidebar-mode: 			false;
 	dpi:			        128;
-	    me-accept-entry: "!MousePrimary";
+        me-accept-entry:	        "!MousePrimary";
 }
 @import "~/.config/rofi/theme.rasi"
 element-text {

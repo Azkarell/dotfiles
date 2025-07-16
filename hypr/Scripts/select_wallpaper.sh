@@ -14,7 +14,7 @@ if [[ -f $SELECTED ]]; then
 
 	FOCUSED_MONITOR=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
 
-	hyprctl hyprpaper reload "$FOCUSED_MONITOR","$SELECTED" 
+	hyprctl hyprpaper reload ,"$SELECTED" 
 	$HOME/.config/hypr/Scripts/walcur.sh
 	$HOME/.config/mako/update-theme-wallust.sh
 	pywalfox update

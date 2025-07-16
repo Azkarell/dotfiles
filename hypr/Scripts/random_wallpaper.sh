@@ -8,7 +8,7 @@ FOCUSED_MONITOR=$(hyprctl monitors -j | jq -r '.[] | select(.focused) | .name')
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
 
 # Apply the selected wallpaper
-hyprctl hyprpaper reload "$FOCUSED_MONITOR","$WALLPAPER"
+hyprctl hyprpaper reload ,"$WALLPAPER"
 
 
 "$HOME/.config/hypr/Scripts/walcur.sh"

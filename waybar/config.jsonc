@@ -4,6 +4,7 @@
   "position": "top",
   "height": 45,
   "spacing": 0,
+  "output": "HDMI-A-4",
   "modules-left": [
     "hyprland/workspaces",
     "tray",
@@ -12,8 +13,11 @@
     "custom/power",
     "clock"
   ],
-  "modules-center": ["hyprland/window"],
+  "modules-center": [
+    "hyprland/window",
+  ],
   "modules-right": [
+    "idle_inhibitor",
     "network",
     "battery",
     // "bluetooth",
@@ -26,27 +30,61 @@
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
-    "format": "{icon}",
+    "format": "{icon}{windows}",
     "on-click": "activate",
     "persistent-workspaces": {
-    "*":[1,2,3,4,5,6,7]
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
     },
-    "format-icons":{
-    "1": "󰣇",
-    "2": "",
-    "3": "",
-    "4": "󰇮",
-    "5": "",
-    "6": "",
-    "7": "",
-    "active": "󱓻"
+    "format-icons": {
+      "empty": "◯",
+      "default": "",
+      "active": ""
+    },
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "class<firefox> title<.*YouTube.*>": "", // Windows whose titles contain "youtube"
+      "class<firefox>": "", // Windows whose classes are "firefox"
+      "class<firefox> title<.*Amazon.*>": "",
+      "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+      "code": "󰨞",
+      "class<kitty>": "",
+      "class<steam>": "",
+      "class<org.gnome.Evolution>": "✉"
+    }
+    // "format-icons": {
+    //   "1": "󰣇",
+    //   "2": "",
+    //   "3": "",
+    //   "4": "󰇮",
+    //   "5": "",
+    //   "6": "",
+    //   "7": "",
+    //   "active": "🔿"
+    // }
+  },
+  "hyprland/window": {
+    "icon": true
+  },
+  "idle_inhibitor": {
+    "format": "{icon} ",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
     }
   },
   "custom/lock": {
-  "format": "  ",
-  "on-click": "hyprlock",
-  "tooltip": true,
-  "tooltip-format": "lock pc"
+    "format": "  ",
+    "on-click": "hyprlock",
+    "tooltip": true,
+    "tooltip-format": "lock pc"
   },
   "custom/reboot": {
     "format": "  ",
@@ -71,17 +109,24 @@
   },
   "battery": {
     "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
-        "format-icons": ["", "", "", "", ""],
-        "format-time": "{H}h{M}m",
-        "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
-        "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
-        "interval": 30,
-        "states": {
-            "warning": 25,
-            "critical": 10
-        },
-        "tooltip": false,
-        "on-click": "2"  },
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-time": "{H}h{M}m",
+    "format-charging": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+    "format-full": "<span font='Font Awesome 5 Free'></span>  <span font='Font Awesome 5 Free 11'>{icon}</span>  Charged",
+    "interval": 30,
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "tooltip": false,
+    "on-click": "2"
+  },
   "pulseaudio": {
     "format": "{icon} {volume}% ",
     "format-muted": " 󰖁 0% ",
@@ -152,4 +197,3 @@
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
   }
 }
-
