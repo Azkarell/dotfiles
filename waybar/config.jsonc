@@ -4,7 +4,7 @@
   "position": "top",
   "height": 45,
   "spacing": 0,
-  "output": "HDMI-A-4",
+  //"output": "HDMI-A-4",
   "modules-left": [
     "hyprland/workspaces",
     "tray",
@@ -17,16 +17,34 @@
     "hyprland/window",
   ],
   "modules-right": [
-    "idle_inhibitor",
+    // "idle_inhibitor",
     "network",
     "battery",
     // "bluetooth",
-    "pulseaudio",
-    "backlight",
+    //"pulseaudio",
+    "wireplumber",
+    //"backlight",
+    "custom/gpu",
     "custom/temperature",
     "memory",
     "cpu"
   ],
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": " 󰖁 ",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click": "pavucontrol",
+    "format-icons": [
+      "  ",
+      "  ",
+      "  "
+    ]
+  },
+  "custom/gpu": {
+    "format": " {text}",
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "interval": 1
+  },
   "hyprland/workspaces": {
     "disable-scroll": false,
     "all-outputs": true,
@@ -71,7 +89,8 @@
     // }
   },
   "hyprland/window": {
-    "icon": true
+    "icon": true,
+    "separate-outputs": true,
   },
   "idle_inhibitor": {
     "format": "{icon} ",
@@ -99,10 +118,11 @@
     "tooltip-format": "shutdown"
   },
   "network": {
+    "format": "󱘖 {ipaddr}",
     "format-wifi": " 󰤨  {essid} ",
-    "format-ethernet": "  Wired ",
+    "format-ethernet": " ",
     "tooltip-format": "<span color='#FF1493'> 󰅧 </span>{bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
-    "format-linked": " 󱘖 {ifname} (No IP) ",
+    "format-linked": " 󱘖 {ifname} ",
     "format-disconnected": "  Disconnected ",
     "format-alt": " 󰤨 {signalStrength}% ",
     "interval": 1

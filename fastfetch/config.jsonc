@@ -3,10 +3,10 @@
     "display": {
         "bar": {
             "width": 10,
-             "charElapsed": "▮"
+            "charElapsed": "▮"
         },
         "key": {
-            "width": 15 
+            "width": 15
         }
     },
     "modules": [
@@ -20,7 +20,6 @@
             "key": "Hostname",
             "format": "{host-name}"
         },
-        
         {
             "type": "host",
             "key": "Model"
@@ -75,8 +74,8 @@
         },
         {
             "type": "cpu",
-             "key": "CPU Name",
-             "format": "{name}"
+            "key": "CPU Name",
+            "format": "{name}"
         },
         {
             "type": "CPUUsage",
@@ -115,30 +114,30 @@
         {
             "type": "Battery",
             "format": "{capacity-bar} {capacity} @Cycle {cycle-count}",
-             "key" : "Battery",
+            "key": "Battery",
             "percent": {
                 "type": 3,
                 "green": 70,
-                "yellow":30,
+                "yellow": 30,
                 "red": 15
             }
         },
         {
             "type": "weather",
             "key": "Weather",
-             "location": "Erlangen",
+            "location": "Erlangen",
             "output-format": "%.1f°C %s",
-            "timeout": 1
+            "timeout": 2
         }
     ],
     "logo": {
         "type": "auto",
         "source": "$(ls /usr/share/wallpapers/*.{png,jpg,jpeg} | shuf -n 1)",
-        "width" : 38,
+        "width": 38,
         "height": 12,
         "padding": {
             "top": 0,
-            "left" : 0,
+            "left": 0,
             "right": 2
         }
     }

@@ -73,11 +73,13 @@
 #battery,
 #pulseaudio,
 #backlight,
+#wireplumber,
 #custom-temperature,
 #idle_inhibitor,
 #memory,
 #cpu,
 #network,
+#custom-gpu,
 #custom-lock {
   border-radius: 4px;
   margin: 6px 3px;
@@ -140,12 +142,21 @@
   background-color: @color15;
 }
 
+#custom-gpu {
+  background-color: @color12;
+  min-width: 50px;
+}
+
 #window {
   background-color: @color2;
 }
 
 #waybar.hidden {
   opacity: 0.5;
+}
+
+#wireplumber {
+  background-color: @color10;
 }
 
 #workspaces button {
