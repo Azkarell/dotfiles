@@ -80,6 +80,7 @@
 #cpu,
 #network,
 #custom-gpu,
+#custom-wttr,
 #custom-lock {
   border-radius: 4px;
   margin: 6px 3px;
@@ -190,15 +191,20 @@
   background: none;
 }
 
+#custom-wttr {
+  background-color: @color12;
+}
+
 tooltip {
   border-radius: 8px;
   padding: 16px;
-  background-color: @background;
+  background-color: @color2;
   color: @foreground;
 }
 
 tooltip label {
   padding: 5px;
-  background-color: @background;
+  background-color: @color2;
   color: @foreground;
 }
+                                                                               

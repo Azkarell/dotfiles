@@ -11,7 +11,8 @@
     "custom/lock",
     "custom/reboot",
     "custom/power",
-    "clock"
+    "clock",
+    "custom/wttr",
   ],
   "modules-center": [
     "hyprland/window",
@@ -19,7 +20,7 @@
   "modules-right": [
     // "idle_inhibitor",
     "network",
-    "battery",
+    //"battery",
     // "bluetooth",
     //"pulseaudio",
     "wireplumber",
@@ -29,6 +30,13 @@
     "memory",
     "cpu"
   ],
+  "custom/wttr": {
+    "format": "{}°",
+    "tooltip": true,
+    "interval": 3600,
+    "exec": "wttrbar --location Erlangen --nerd",
+    "return-type": "json"
+  },
   "wireplumber": {
     "format": "{volume}% {icon}",
     "format-muted": " 󰖁 ",
