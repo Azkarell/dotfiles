@@ -56,3 +56,24 @@ pavucontrol.ini
 yazi.toml
 fontconfig
 menus/applications-merged
+Todoist/Cache/Cache_Data/index-dir
+Todoist/Cache/Cache_Data
+Todoist/Code Cache
+Todoist/Crashpad
+Todoist/DawnGraphiteCache
+Todoist/DawnWebGPUCache
+Todoist/Dictionaries
+Todoist/GPUCache
+Todoist/IndexedDB
+Todoist/Local Storage/leveldb
+Todoist/Service Worker
+Todoist/Session Storage
+Todoist/Shared Dictionary
+Todoist/WebStorage
+Todoist
+calcure
+cava/shaders
+flowblade
+ncspot/userstate.cbor
+qalculate/qalc.history
+spotify

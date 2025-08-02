@@ -2,11 +2,19 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "display": {
         "bar": {
-            "width": 10,
+            "width": 12,
             "charElapsed": "▮"
         },
         "key": {
             "width": 15
+        },
+        "percent": {
+            "type": 9,
+            "color": {
+                "green": "green",
+                "yellow": "light_yellow",
+                "red": "light_red"
+            }
         }
     },
     "modules": [
@@ -49,7 +57,7 @@
             "format": "{pretty-name} {version} {#37}█{#97}█ {#36}█{#96}█ {#35}█{#95}█ {#34}█{#94}█ {#33}█{#93}█ {#32}█{#92}█ {#31}█{#91}█ {#30}█{#90}█"
         },
         {
-            "type": "TerminalFont",
+            "type": "terminalfont",
             "key": "Font"
         },
         //{
@@ -66,11 +74,6 @@
             "type": "cpu",
             "key": "CPU Cores",
             "format": "({cores-physical}C / {cores-logical}T) @ {freq-max} ",
-            "percent": {
-                "type": 3,
-                "green": 30,
-                "yellow": 70
-            }
         },
         {
             "type": "cpu",
@@ -78,7 +81,7 @@
             "format": "{name}"
         },
         {
-            "type": "CPUUsage",
+            "type": "cpuusage",
             "key": "Usage",
             "format": "{avg-bar} {min-bar} {max-bar} {avg}"
         },
@@ -97,8 +100,13 @@
         },
         {
             "type": "disk",
-            "key": "Disk",
-            "folders": "/"
+            "key": "System",
+            "folders": "/",
+        },
+        {
+            "type": "disk",
+            "key": "Games",
+            "folders": "/home/azkarell/games/",
         },
         {
             "type": "localip",
@@ -106,17 +114,17 @@
             "showIpv6": true,
             "showPrefixLen": false
         },
+        // {
+        //     "type": "publicip",
+        //     "key": "WAN IP",
+        //     "timeout": 1000
+        // },
         {
-            "type": "publicip",
-            "key": "WAN IP",
-            "timeout": 1000
-        },
-        {
-            "type": "Battery",
+            "type": "battery",
             "format": "{capacity-bar} {capacity} @Cycle {cycle-count}",
             "key": "Battery",
             "percent": {
-                "type": 3,
+                "type": 9,
                 "green": 70,
                 "yellow": 30,
                 "red": 15
