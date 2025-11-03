@@ -21,11 +21,12 @@ Scope {
                 margins {
                     right: 16
                     left: 16
+                    top: 4
                 }
                 RowLayout {
                    anchors.right: parent.right
+                   VolumeControl {}
                    Clock {}
-                   Volume {}
                 }
 
                

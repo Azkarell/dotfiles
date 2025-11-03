@@ -3,7 +3,10 @@
     "display": {
         "bar": {
             "width": 12,
-            "charElapsed": "▮"
+            "char": {
+                "elapsed": "▮",
+                "total": "-"
+            }
         },
         "key": {
             "width": 15
