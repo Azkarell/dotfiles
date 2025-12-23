@@ -3,14 +3,10 @@
     "display": {
         "bar": {
             "width": 12,
-<<<<<<< Updated upstream
             "char": {
                 "elapsed": "▮",
                 "total": "-"
             }
-=======
-            "char": { "elapsed": "▮" },
->>>>>>> Stashed changes
         },
         "key": {
             "width": 15
