@@ -18,7 +18,7 @@
 		"showOnHover": true,
 		"status": {
 			"showAudio": true,
-			"showBattery": false,
+			"showBattery": true,
 			"showBluetooth": true,
 			"showKbLayout": false,
 			"showNetwork": true
