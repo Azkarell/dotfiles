@@ -7,6 +7,9 @@
 			"audio": [
 				"pavucontrol"
 			]
+		},
+		"idle": {
+			"timeouts": []
 		}
 	},
 	"background": {
