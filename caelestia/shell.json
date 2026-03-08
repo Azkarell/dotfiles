@@ -82,6 +82,7 @@
 	"services": {
 		"weatherLocation": "49.598121,11.003653",
 		"useFahrenheit": false,
+		"useFahrenheitPerformance": false,
 		"useTwelveHourClock": false
 	},
 	"session": {
